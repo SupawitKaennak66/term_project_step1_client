@@ -13,7 +13,8 @@ export async function login({ email, password }) {
       return response.json();
     })
     .catch((err) => {
-      console.log(err);
+      console.error("Error during login:", err);
+      // คุณสามารถทำการ handle ข้อผิดพลาดที่นี่ได้ เช่น แสดงข้อความแจ้งเตือนหรือทำการล็อกอินใหม่
     });
 }
 
@@ -31,6 +32,7 @@ export async function searchArtworks({ keyword }) {
       return response.json();
     })
     .catch((err) => {
-      console.log(err);
+      console.error("Error during artwork search:", err);
+      // คุณสามารถทำการ handle ข้อผิดพลาดที่นี่ได้ เช่น แสดงข้อความแจ้งเตือนหรือทำการลองค้นหาใหม่
     });
 }
